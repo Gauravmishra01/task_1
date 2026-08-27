@@ -1,8 +1,7 @@
-/* =========================
-   BASIC CSS
-========================= */
+/* =========================================
+   1. UNIVERSAL SELECTOR
+========================================= */
 
-/* Universal Selector */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,28 +9,47 @@
 }
 
 
-/* Element Selector */
+/* =========================================
+   2. BODY / ELEMENT SELECTORS
+========================================= */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    line-height: 1.6;
 }
 
-
-/* Grouping Selector */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: #222;
 }
 
+p {
+    color: #555;
+}
 
-/* =========================
-   NAVBAR
-========================= */
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* =========================================
+   3. NAVBAR
+========================================= */
 
 .navbar {
     background-color: #222;
-    padding: 20px;
-    text-align: center;
+    padding: 20px 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo h2 {
@@ -43,32 +61,60 @@ h1, h2, h3 {
 }
 
 .nav-links {
-    margin-top: 15px;
-}
-
-.nav-links li {
-    display: inline;
-    margin: 0 10px;
+    display: flex;
+    gap: 25px;
 }
 
 .nav-links a {
     color: white;
-    text-decoration: none;
+    transition: 0.3s;
 }
 
-/* Pseudo-class */
+
+/* Normal Hover Effect */
+
 .nav-links a:hover {
     color: orange;
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* First Child */
+
+.nav-links li:first-child a {
+    color: orange;
+}
+
+
+/* Navbar Button */
+
+.nav-button {
+    padding: 10px 20px;
+
+    background-color: orange;
+    color: white;
+
+    border: 2px solid orange;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    background-color: white;
+    color: orange;
+}
+
+
+/* =========================================
+   4. HERO SECTION
+========================================= */
 
 .hero {
     width: 90%;
     min-height: 500px;
+
     margin: 30px auto;
     padding: 50px;
 
@@ -77,11 +123,29 @@ h1, h2, h3 {
     border: 2px solid #ddd;
     border-radius: 10px;
 
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+.hero-content {
+    width: 55%;
+}
+
+.subtitle {
+    color: orange;
+    font-size: 14px;
+    font-weight: bold;
+
+    margin-bottom: 10px;
 }
 
 .hero h1 {
-    font-size: 40px;
+    font-size: 45px;
+    line-height: 1.2;
+
     margin-bottom: 20px;
 }
 
@@ -90,55 +154,76 @@ h1, h2, h3 {
 }
 
 .hero-text {
-    width: 70%;
-    margin: 20px auto;
+    width: 90%;
     font-size: 18px;
+
+    margin-bottom: 25px;
 }
 
 
-/* =========================
-   BUTTON
-========================= */
+/* =========================================
+   5. BUTTONS
+========================================= */
+
+.hero-buttons {
+    margin-top: 20px;
+}
 
 .btn {
     display: inline-block;
 
     padding: 12px 25px;
-    margin: 10px;
+    margin-right: 10px;
 
     border: 2px solid orange;
     border-radius: 5px;
 
-    text-decoration: none;
+    cursor: pointer;
+
+    transition: 0.3s;
 }
+
+
+/* Primary Button */
 
 .primary-btn {
     background-color: orange;
     color: white;
 }
 
+
+/* Secondary Button */
+
 .secondary-btn {
+    background-color: white;
     color: orange;
 }
 
-/* Hover */
-.btn:hover {
+
+/* Button Hover */
+
+.primary-btn:hover {
     background-color: #222;
+    border-color: #222;
+    color: white;
+}
+
+.secondary-btn:hover {
+    background-color: orange;
     color: white;
 }
 
 
-/* =========================
-   CODE CARD
-========================= */
+/* =========================================
+   6. HERO CODE CARD
+========================================= */
 
 .hero-card {
-    width: 80%;
-    margin: 30px auto;
+    width: 45%;
 }
 
 .code-window {
-    padding: 20px;
+    padding: 25px;
 
     background-color: #222;
     color: white;
@@ -146,18 +231,41 @@ h1, h2, h3 {
     border: 2px solid black;
     border-radius: 10px;
 
-    text-align: left;
+    overflow: hidden;
+}
+
+.window-buttons {
+    margin-bottom: 20px;
+}
+
+.window-buttons span {
+    display: inline-block;
+
+    width: 12px;
+    height: 12px;
+
+    margin-right: 5px;
+
+    background-color: #aaa;
+
+    border-radius: 50%;
+}
+
+.code-window pre {
+    color: white;
+    font-family: monospace;
 }
 
 
-/* =========================
-   COMMON SECTION
-========================= */
+/* =========================================
+   7. COMMON SECTION
+========================================= */
 
 .section {
     width: 90%;
+
     margin: 30px auto;
-    padding: 40px;
+    padding: 50px;
 
     background-color: white;
 
@@ -167,19 +275,29 @@ h1, h2, h3 {
 
 .section-heading {
     text-align: center;
-    margin-bottom: 30px;
+
+    margin-bottom: 35px;
 }
 
 .section-label {
     color: orange;
+
     font-size: 14px;
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+
     margin-bottom: 10px;
 }
 
 
-/* =========================
-   ABOUT
-========================= */
+/* =========================================
+   8. ABOUT SECTION
+========================================= */
 
 .about-content {
     display: flex;
@@ -195,16 +313,30 @@ h1, h2, h3 {
 
     border: 1px solid #ddd;
     border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+
+/* Hover */
+
+.about-card:hover {
+    border-color: orange;
+    transform: translateY(-5px);
+}
+
+.about-card h3 {
+    margin-bottom: 10px;
 }
 
 .about-card p {
-    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 
-/* =========================
-   SKILLS
-========================= */
+/* =========================================
+   9. SKILLS
+========================================= */
 
 .skills-container {
     display: flex;
@@ -214,24 +346,41 @@ h1, h2, h3 {
 .skill-card {
     width: 25%;
 
-    padding: 20px;
+    padding: 25px;
 
     background-color: #f9f9f9;
 
     border: 1px solid #ddd;
     border-radius: 8px;
+
+    transition: 0.3s;
 }
 
-/* Pseudo-class */
+
+/* Hover */
+
 .skill-card:hover {
+    border-color: orange;
+    transform: translateY(-5px);
+}
+
+
+/* Second Skill Card */
+
+.skill-card:nth-child(2) {
     border-color: orange;
 }
 
-.skill-icon {
-    width: 50px;
-    height: 50px;
 
-    padding: 15px;
+/* Skill Icon */
+
+.skill-icon {
+    width: 55px;
+    height: 55px;
+
+    padding: 17px 5px;
+
+    margin-bottom: 15px;
 
     background-color: orange;
     color: white;
@@ -239,7 +388,14 @@ h1, h2, h3 {
     border-radius: 50%;
 
     text-align: center;
+
+    font-weight: bold;
 }
+
+
+/* =========================================
+   10. PROGRESS BAR
+========================================= */
 
 .progress {
     width: 100%;
@@ -254,9 +410,12 @@ h1, h2, h3 {
 
 .progress-bar {
     display: block;
+
     height: 100%;
 
     background-color: orange;
+
+    border-radius: 5px;
 }
 
 .html-progress {
@@ -276,23 +435,37 @@ h1, h2, h3 {
 }
 
 
-/* =========================
-   CONCEPTS
-========================= */
+/* =========================================
+   11. CSS CONCEPTS
+========================================= */
 
 .concept-list {
     display: flex;
     flex-wrap: wrap;
+
     gap: 20px;
 }
 
 .concept {
-    width: 30%;
+    width: 31%;
 
     padding: 20px;
 
+    background-color: #f9f9f9;
+
     border: 1px solid #ddd;
     border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+
+/* Hover */
+
+.concept:hover {
+    background-color: #fff8e8;
+    border-color: orange;
+    transform: translateY(-5px);
 }
 
 .concept span {
@@ -300,17 +473,22 @@ h1, h2, h3 {
     color: orange;
 }
 
+.concept h3 {
+    margin: 8px 0;
+}
 
-/* Pseudo-element */
+
+/* Pseudo Element */
+
 .concept h3::before {
     content: "→ ";
     color: orange;
 }
 
 
-/* =========================
-   PROJECTS
-========================= */
+/* =========================================
+   12. PROJECTS
+========================================= */
 
 .projects-container {
     display: flex;
@@ -318,7 +496,7 @@ h1, h2, h3 {
 }
 
 .project-card {
-    width: 33%;
+    width: 33.33%;
 
     background-color: #f9f9f9;
 
@@ -326,18 +504,53 @@ h1, h2, h3 {
     border-radius: 8px;
 
     overflow: hidden;
+
+    transition: 0.3s;
 }
 
-.project-image {
-    height: 150px;
 
-    padding: 50px;
+/* Project Hover */
+
+.project-card:hover {
+    border-color: orange;
+    transform: translateY(-5px);
+}
+
+
+/* Project Image */
+
+.project-image {
+    height: 160px;
+
+    padding: 55px;
 
     background-color: #ddd;
 
     text-align: center;
+
     font-size: 30px;
+    font-weight: bold;
+
+    color: orange;
 }
+
+
+/* Different Backgrounds */
+
+.project-one {
+    background-color: #fff1cc;
+}
+
+.project-two {
+    background-color: #e8f5e9;
+}
+
+.project-three {
+    background-color: #e3f2fd;
+}
+
+
+/* Project Content */
 
 .project-content {
     padding: 20px;
@@ -345,20 +558,39 @@ h1, h2, h3 {
 
 .project-category {
     color: orange;
-    font-size: 14px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+.project-content h3 {
+    margin-bottom: 8px;
 }
 
 .project-link {
     display: inline-block;
+
     margin-top: 10px;
 
     color: orange;
+    font-weight: bold;
+
+    transition: 0.3s;
 }
 
 
-/* =========================
-   CONTACT FORM
-========================= */
+/* Link Hover */
+
+.project-link:hover {
+    color: #222;
+}
+
+
+/* =========================================
+   13. CONTACT SECTION
+========================================= */
 
 .contact-wrapper {
     display: flex;
@@ -372,11 +604,46 @@ h1, h2, h3 {
 .contact-form {
     width: 50%;
 
-    padding: 20px;
+    padding: 25px;
+
+    background-color: #f9f9f9;
 
     border: 1px solid #ddd;
     border-radius: 8px;
 }
+
+
+/* Contact Details */
+
+.contact-details {
+    margin-top: 25px;
+}
+
+.contact-item {
+    margin-bottom: 20px;
+}
+
+.contact-item strong {
+    display: block;
+
+    margin-bottom: 5px;
+}
+
+.contact-item a {
+    color: orange;
+
+    transition: 0.3s;
+}
+
+.contact-item a:hover {
+    color: #222;
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   14. FORM
+========================================= */
 
 .form-group {
     margin-bottom: 15px;
@@ -384,7 +651,10 @@ h1, h2, h3 {
 
 .form-group label {
     display: block;
+
     margin-bottom: 5px;
+
+    font-weight: bold;
 }
 
 .form-group input,
@@ -393,56 +663,106 @@ h1, h2, h3 {
 
     padding: 10px;
 
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+
     border: 1px solid #aaa;
     border-radius: 5px;
+
+    outline: none;
+
+    transition: 0.3s;
 }
 
 
-/* Pseudo-class */
+/* Focus Pseudo Class */
+
 .form-group input:focus,
 .form-group textarea:focus {
     border-color: orange;
-    outline: 2px solid #ffd580;
+    outline: 2px solid #ffe0a3;
 }
 
 
-/* Attribute Selector */
+/* =========================================
+   15. ATTRIBUTE SELECTORS
+========================================= */
+
+/* Input having required attribute */
+
+input[required] {
+    border-left: 4px solid orange;
+}
+
+
+/* Email input */
+
 input[type="email"] {
     background-color: #fffaf0;
 }
 
-input[required] {
-    border-left: 3px solid orange;
+
+/* Checkbox */
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
 }
 
 
-/* Submit Button */
+/* Checked */
+
+input[type="checkbox"]:checked {
+    accent-color: orange;
+}
+
+
+/* =========================================
+   16. FORM BUTTON
+========================================= */
+
 .submit-btn {
     width: 100%;
 
     padding: 12px;
 
-    border: none;
-    border-radius: 5px;
-
     background-color: orange;
     color: white;
 
+    border: 2px solid orange;
+    border-radius: 5px;
+
+    font-size: 16px;
+    font-weight: bold;
+
     cursor: pointer;
+
+    transition: 0.3s;
 }
+
+
+/* Hover */
 
 .submit-btn:hover {
     background-color: #222;
+    border-color: #222;
 }
 
 
-/* =========================
-   CSS DEMO
-========================= */
+/* Active */
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================================
+   17. DEMO SECTION
+========================================= */
 
 .demo-box {
     width: 80%;
-    min-height: 200px;
+    min-height: 220px;
 
     margin: auto;
     padding: 30px;
@@ -458,21 +778,25 @@ input[required] {
 
 
 /* ID Selector */
+
 #special-text {
     color: orange;
 }
 
 
 /* Class Selector */
+
 .demo-text {
     font-size: 18px;
 }
 
 
 /* Attribute Selector */
+
 p[data-type] {
     padding: 10px;
-    border-left: 3px solid orange;
+
+    border-left: 4px solid orange;
 }
 
 p[data-category="css"] {
@@ -481,30 +805,113 @@ p[data-category="css"] {
 
 
 /* Child Combinator */
+
 .demo-box > h3 {
     margin-bottom: 15px;
 }
 
 
 /* Adjacent Sibling */
+
 .demo-box h3 + p {
     font-weight: bold;
 }
 
 
-/* Pseudo-element */
+/* General Sibling */
+
+.demo-box h3 ~ p {
+    margin-top: 10px;
+}
+
+
+/* =========================================
+   18. PSEUDO ELEMENTS
+========================================= */
+
+/* First Letter */
+
 .demo-box p::first-letter {
     font-size: 25px;
+    font-weight: bold;
     color: orange;
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* Placeholder */
+
+input::placeholder,
+textarea::placeholder {
+    color: #999;
+}
+
+
+/* Selection */
+
+::selection {
+    background-color: orange;
+    color: white;
+}
+
+
+/* =========================================
+   19. INHERITANCE
+========================================= */
+
+.contact-item a {
+    color: inherit;
+}
+
+
+/* =========================================
+   20. SPECIFICITY & SOURCE ORDER
+========================================= */
+
+.demo-text {
+    color: green;
+}
+
+#special-text {
+    color: orange;
+}
+
+
+/*
+    ID has higher specificity than Class.
+*/
+
+
+/* Source Order Example */
+
+.demo-box p {
+    font-size: 16px;
+}
+
+.demo-box p {
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   21. !IMPORTANT
+========================================= */
+
+.demo-box a {
+    color: red !important;
+}
+
+
+/*
+    !important has higher priority.
+*/
+
+
+/* =========================================
+   22. FOOTER
+========================================= */
 
 .footer {
-    padding: 30px;
+    padding: 35px;
 
     background-color: #222;
     color: white;
@@ -520,25 +927,57 @@ p[data-category="css"] {
     color: orange;
 }
 
+.footer p {
+    color: #ddd;
+}
+
 .footer-links {
-    margin: 20px;
+    margin: 20px 0;
 }
 
 .footer-links a {
     color: white;
-    margin: 10px;
+
+    margin: 0 10px;
+
+    transition: 0.3s;
 }
+
+
+/* Footer Hover */
 
 .footer-links a:hover {
     color: orange;
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* =========================================
+   23. RESPONSIVE DESIGN
+========================================= */
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 30px;
+    }
+
+    .hero-content,
+    .hero-card {
+        width: 100%;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
 
     .about-content,
     .skills-container,
@@ -553,14 +992,62 @@ p[data-category="css"] {
     .contact-info,
     .contact-form {
         width: 100%;
+
         margin-bottom: 20px;
     }
 
-    .hero {
-        padding: 30px 15px;
+    .concept-list {
+        display: block;
     }
 
-    .hero-text {
+    .concept {
         width: 100%;
+
+        margin-bottom: 20px;
+    }
+
+    .demo-box {
+        width: 100%;
+    }
+}
+
+
+/* =========================================
+   24. SMALL SCREEN
+========================================= */
+
+@media (max-width: 500px) {
+
+    .section {
+        width: 95%;
+        padding: 30px 20px;
+    }
+
+    .hero {
+        width: 95%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .nav-links {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .btn {
+        width: 100%;
+        margin: 5px 0;
+        text-align: center;
     }
 }
