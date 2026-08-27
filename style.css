@@ -1,0 +1,566 @@
+/* =========================
+   BASIC CSS
+========================= */
+
+/* Universal Selector */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Element Selector */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+/* Grouping Selector */
+h1, h2, h3 {
+    color: #222;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo h2 {
+    color: white;
+}
+
+.logo span {
+    color: orange;
+}
+
+.nav-links {
+    margin-top: 15px;
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Pseudo-class */
+.nav-links a:hover {
+    color: orange;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    width: 90%;
+    min-height: 500px;
+    margin: 30px auto;
+    padding: 50px;
+
+    background-color: white;
+
+    border: 2px solid #ddd;
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: orange;
+}
+
+.hero-text {
+    width: 70%;
+    margin: 20px auto;
+    font-size: 18px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 12px 25px;
+    margin: 10px;
+
+    border: 2px solid orange;
+    border-radius: 5px;
+
+    text-decoration: none;
+}
+
+.primary-btn {
+    background-color: orange;
+    color: white;
+}
+
+.secondary-btn {
+    color: orange;
+}
+
+/* Hover */
+.btn:hover {
+    background-color: #222;
+    color: white;
+}
+
+
+/* =========================
+   CODE CARD
+========================= */
+
+.hero-card {
+    width: 80%;
+    margin: 30px auto;
+}
+
+.code-window {
+    padding: 20px;
+
+    background-color: #222;
+    color: white;
+
+    border: 2px solid black;
+    border-radius: 10px;
+
+    text-align: left;
+}
+
+
+/* =========================
+   COMMON SECTION
+========================= */
+
+.section {
+    width: 90%;
+    margin: 30px auto;
+    padding: 40px;
+
+    background-color: white;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-label {
+    color: orange;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-content {
+    display: flex;
+    gap: 20px;
+}
+
+.about-card {
+    width: 50%;
+
+    padding: 25px;
+
+    background-color: #f9f9f9;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.about-card p {
+    margin-top: 10px;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-container {
+    display: flex;
+    gap: 20px;
+}
+
+.skill-card {
+    width: 25%;
+
+    padding: 20px;
+
+    background-color: #f9f9f9;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Pseudo-class */
+.skill-card:hover {
+    border-color: orange;
+}
+
+.skill-icon {
+    width: 50px;
+    height: 50px;
+
+    padding: 15px;
+
+    background-color: orange;
+    color: white;
+
+    border-radius: 50%;
+
+    text-align: center;
+}
+
+.progress {
+    width: 100%;
+    height: 8px;
+
+    margin-top: 15px;
+
+    background-color: #ddd;
+
+    border-radius: 5px;
+}
+
+.progress-bar {
+    display: block;
+    height: 100%;
+
+    background-color: orange;
+}
+
+.html-progress {
+    width: 90%;
+}
+
+.css-progress {
+    width: 80%;
+}
+
+.js-progress {
+    width: 60%;
+}
+
+.ui-progress {
+    width: 70%;
+}
+
+
+/* =========================
+   CONCEPTS
+========================= */
+
+.concept-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.concept {
+    width: 30%;
+
+    padding: 20px;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.concept span {
+    font-size: 25px;
+    color: orange;
+}
+
+
+/* Pseudo-element */
+.concept h3::before {
+    content: "→ ";
+    color: orange;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects-container {
+    display: flex;
+    gap: 20px;
+}
+
+.project-card {
+    width: 33%;
+
+    background-color: #f9f9f9;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+.project-image {
+    height: 150px;
+
+    padding: 50px;
+
+    background-color: #ddd;
+
+    text-align: center;
+    font-size: 30px;
+}
+
+.project-content {
+    padding: 20px;
+}
+
+.project-category {
+    color: orange;
+    font-size: 14px;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+
+    color: orange;
+}
+
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+.contact-wrapper {
+    display: flex;
+    gap: 30px;
+}
+
+.contact-info {
+    width: 50%;
+}
+
+.contact-form {
+    width: 50%;
+
+    padding: 20px;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+
+/* Pseudo-class */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: orange;
+    outline: 2px solid #ffd580;
+}
+
+
+/* Attribute Selector */
+input[type="email"] {
+    background-color: #fffaf0;
+}
+
+input[required] {
+    border-left: 3px solid orange;
+}
+
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: orange;
+    color: white;
+
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #222;
+}
+
+
+/* =========================
+   CSS DEMO
+========================= */
+
+.demo-box {
+    width: 80%;
+    min-height: 200px;
+
+    margin: auto;
+    padding: 30px;
+
+    background-color: #fafafa;
+
+    border: 2px solid orange;
+    border-radius: 10px;
+
+    outline: 2px dashed #999;
+    outline-offset: 5px;
+}
+
+
+/* ID Selector */
+#special-text {
+    color: orange;
+}
+
+
+/* Class Selector */
+.demo-text {
+    font-size: 18px;
+}
+
+
+/* Attribute Selector */
+p[data-type] {
+    padding: 10px;
+    border-left: 3px solid orange;
+}
+
+p[data-category="css"] {
+    background-color: #fff3d6;
+}
+
+
+/* Child Combinator */
+.demo-box > h3 {
+    margin-bottom: 15px;
+}
+
+
+/* Adjacent Sibling */
+.demo-box h3 + p {
+    font-weight: bold;
+}
+
+
+/* Pseudo-element */
+.demo-box p::first-letter {
+    font-size: 25px;
+    color: orange;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    padding: 30px;
+
+    background-color: #222;
+    color: white;
+
+    text-align: center;
+}
+
+.footer h2 {
+    color: white;
+}
+
+.footer span {
+    color: orange;
+}
+
+.footer-links {
+    margin: 20px;
+}
+
+.footer-links a {
+    color: white;
+    margin: 10px;
+}
+
+.footer-links a:hover {
+    color: orange;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    .about-content,
+    .skills-container,
+    .projects-container,
+    .contact-wrapper {
+        display: block;
+    }
+
+    .about-card,
+    .skill-card,
+    .project-card,
+    .contact-info,
+    .contact-form {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .hero {
+        padding: 30px 15px;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+}
